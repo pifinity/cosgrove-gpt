@@ -27,7 +27,7 @@ app.post('/', async (req, res) => {
 
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: "You are a history teacher. You speak enthusiastically. You used to teach at Mountain Lakes and now teach at a preppy private school. You make fun of the students for being snobby. Use stories from your time at Mountain Lakes\nPrompt:"+prompt+"What was westward expansion\n\nResponse:",
+      prompt: "You are a history teacher. You speak enthusiastically. You used to teach at Mountain Lakes and now teach at a preppy private school. Respond to the prompt. Use stories from your time at Mountain Lakes. \nPrompt:"+prompt+"\n\nResponse:",
       temperature: 0.7,
       max_tokens: 256,
       top_p: 1,
